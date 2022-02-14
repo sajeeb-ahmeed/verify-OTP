@@ -51,5 +51,5 @@ function verifyPin() {
 // copy code 
 function clippadBtn() {
     const pincopy = document.getElementById('display-pin').value;
-    window.navigator.clipboard.writeText(pincopy)
+    navigator.clipboard.writeText(pincopy)
 }
