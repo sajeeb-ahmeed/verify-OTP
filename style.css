@@ -3,17 +3,21 @@
 }
 
 body {
-    background: #10101B;
+    /* background: #10101B; */
     height: 100vh;
+    background-image: url(./image/unsplash-hacking-bug-bounty.webp);
 }
 
 .container {
     margin-top: 30px;
+    /* background-image: url(./image/binary-code-greenjpg.jpg); */
 }
 
 .half-width {
     height: 570px;
-    background: #222436;
+    background-color: rgba(54, 184, 207, 0.2);
+    color: rgba(45, 49, 43, 0.2);
+    border-radius: 15px;
     padding: 30px;
     text-align: center;
 }
@@ -97,22 +101,59 @@ input[type='text']:focus {
 }
 
 .notify {
-    color: #fff;
+    color: #ffffff;
     text-align: center;
     margin: 0 auto;
-    background: #222436;
+    background: rgb(247, 101, 101);
     margin-top: 20px;
+    font-size: 18px;
     border-radius: 15px;
     padding: 5px 20px;
     display: none;
+
 }
 
 .notify-section {
-    width: 35%;
+    width: 50%;
     margin: 0 auto;
+    margin-top: 20px;
 }
 
 .action-left {
     color: #FF3C5F;
-    margin-top: 10px;
+
+}
+
+.my-btn-pulse-grow {
+
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    animation-name: my-btn-pulse-grow;
+    -webkit-animation-name: my-btn-pulse-grow;
+    animation-name: my-btn-pulse-grow;
+    -webkit-animation-duration: 0.3s;
+    animation-duration: 0.3s;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-direction: alternate;
+    animation-direction: alternate;
+}
+
+
+@-webkit-keyframes my-btn-pulse-grow {
+    to {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+    }
+}
+
+@keyframes my-btn-pulse-grow {
+    to {
+        -webkit-transform: scale(1.1);
+        transform: scale(1.1);
+    }
 }

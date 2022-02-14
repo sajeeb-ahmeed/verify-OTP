@@ -14,8 +14,19 @@
     <div class="container">
         <div class="row">
             <div class="col-md-6">
-                <div class="pin-generator half-width">
-                    <input id="display-pin" class="form-control" type="text">
+
+                <div class="pin-generator half-width p-5">
+                    <input id="display-pin" disabled
+                        class=" text-dark bg-light font-weight-bold  m-auto border-success rounded" type="text">
+                    <br>
+                    <button onclick="clippadBtn()"
+                        class="btn btn-outline-success font-weight-bold text-uppercase text-light py-2 px-4 m-auto d-block">Copy
+                        Pin</button>
+                    <div class="notify-section">
+                        <p id="notify-fail" class="notify my-btn-pulse-grow ">❌ Pin Didn't Match, Please try again</p>
+                        <p id="notify-success" class="notify my-btn-pulse-grow ">✅ Pin Matched... Secret door is opening
+                            for you</p>
+                    </div>
                     <button onclick="generatePin()" class="generate-btn">Generate Pin</button>
                 </div>
             </div>
@@ -45,19 +56,17 @@
                                 <div class="button">C</div>
                             </div>
                             <div>
-                                <button onclick="verifyPin()" type="submit" class="submit-btn">Submit</button>
-                                <p class="action-left">3 try left</p>
+                                <button onclick="verifyPin()" type="submit" class="submit-btn ">Submit</button>
+                                <p class="action-left font-weight-bold ">3 try left</p>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="notify-section">
-                <p id="notify-fail" class="notify">❌ Pin Didn't Match, Please try again</p>
-                <p id="notify-success" class="notify">✅ Pin Matched... Secret door is opening for you</p>
-            </div>
+
         </div>
         <script src="app.js"></script>
+    </div>
 </body>
 
 </html>

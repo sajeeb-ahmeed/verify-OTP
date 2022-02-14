@@ -47,3 +47,9 @@ function verifyPin() {
         failError.style.display = 'block';
     }
 }
+
+// copy code 
+function clippadBtn() {
+    const pincopy = document.getElementById('display-pin').value;
+    window.navigator.clipboard.writeText(pincopy)
+}
