@@ -3,14 +3,16 @@
 }
 
 body {
-    /* background: #10101B; */
     height: 100vh;
-    background-image: url(./image/unsplash-hacking-bug-bounty.webp);
+    background-image: url(./image/binary-code-greenjpg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    object-fit: cover;
 }
 
 .container {
     margin-top: 30px;
-    /* background-image: url(./image/binary-code-greenjpg.jpg); */
+
 }
 
 .half-width {
