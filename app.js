@@ -41,6 +41,7 @@ function verifyPin() {
     const failError = document.getElementById('notify-fail');
     if (pin == typedNumbers) {
         successMessage.style.display = 'block';
+        successMessage.style.backgroundColor = '#4389e6';
         failError.style.display = 'none';
     } else {
         successMessage.style.display = 'none';
@@ -51,5 +52,33 @@ function verifyPin() {
 // copy code 
 function clippadBtn() {
     const pincopy = document.getElementById('display-pin').value;
-    navigator.clipboard.writeText(pincopy)
+    navigator.clipboard.writeText(pincopy);
+
+    if (div !== null) {
+        div.remove();
+        div = null;
+    }
+    generateToastMessage(`${pincopy} Pin copied`);
+
+}
+
+//toast msg 
+let div = null;
+
+function generateToastMessage(msg) {
+    div = document.createElement('div');
+    div.innerText = msg;
+    div.className = 'toast-message toast-message-slide-in';
+
+    div.addEventListener('click', function () {
+        div.classList.remove('toast-message-slide-in');
+        div.classList.add('toast-message-slide-out');
+
+        div.addEventListener('animationend', function () {
+            div.remove();
+            div = null;
+        });
+    });
+
+    document.body.appendChild(div);
 }

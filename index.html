@@ -21,11 +21,19 @@
                         class=" text-dark bg-light font-weight-bold  m-auto border-success rounded" type="text">
                     <br>
                     <button onclick="clippadBtn()"
-                        class="btn btn-outline-success font-weight-bold text-uppercase text-light py-2 px-4 m-auto d-block">Copy
+                        class="btn btn-outline-light font-weight-bold text-uppercase text-danger py-2 px-4 m-auto d-block">Copy
                         Pin</button>
                     <div class="notify-section">
-                        <p id="notify-fail" class="notify my-btn-pulse-grow ">❌ Pin Didn't Match, Please try again</p>
-                        <p id="notify-success" class="notify my-btn-pulse-grow ">✅ Pin Matched... Secret door is opening
+                        <p id="notify-fail"
+                            class="notify my-btn-pulse-grow  toast-message-slide-in toast-message-slide-out  ">
+                            ❌ Pin
+                            Didn't Match, Please
+                            try again</p>
+                        <p id="notify-success"
+                            class="notify my-btn-pulse-grow  toast-message-slide-in toast-message-slide-out ">
+                            ✅
+                            Pin Matched... Secret
+                            door is opening
                             for you</p>
                     </div>
                     <button onclick="generatePin()" class="generate-btn">Generate Pin</button>
